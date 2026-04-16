@@ -298,8 +298,8 @@ function AboutPage() {
           transition={{ duration: 0.5 }}
           className="rounded-[2rem] border border-stone-300 bg-white/75 p-8 shadow-sm md:p-12"
         >
-          <p className="text-sm uppercase tracking-[0.35em] text-stone-500">About</p>
-          <h1 className="mt-4 text-4xl font-semibold leading-tight text-stone-900 md:text-5xl">
+          <p className="text-base uppercase tracking-[0.35em] text-stone-500">About</p>
+          <h1 className="mt-4 text-base leading-8 text-stone-900">
            Im Zach a graduate from the Portland Jewelry academy, I'm an aspiring bench jewler with a deep passion for what I do.
           </h1>
 
