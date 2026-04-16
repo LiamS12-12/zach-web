@@ -300,9 +300,7 @@ function AboutPage() {
         >
           <p className="text-sm uppercase tracking-[0.35em] text-stone-500">About</p>
           <h1 className="mt-4 text-4xl font-semibold leading-tight text-stone-900 md:text-5xl">
-            Look, if you had one shot or one opportunity
-            To seize everything you ever wanted in one moment
-            Would you capture it or just let it slip?
+           Im Zach a graduate Portland Jewelry academy, I'm an asiring bench jewler with a deep passion for what I do.
           </h1>
 
           <div className="mt-8 space-y-6 text-base leading-8 text-stone-700">
