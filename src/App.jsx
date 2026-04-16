@@ -14,27 +14,33 @@ import {
 const services = [
   {
     title: "Sizing up or down",
-    description: "Adjusting ring size for a better, more comfortable fit.",
+    description:
+      "Making a ring fit better while keeping the piece wearable and balanced.",
   },
   {
     title: "Reshanking",
-    description: "Replacing or rebuilding a worn band to restore strength.",
+    description:
+      "Restoring a worn band with new metal for better strength and structure.",
   },
   {
     title: "Retipping",
-    description: "Repairing worn prongs to help keep stones secure.",
+    description:
+      "Rebuilding worn prongs to help keep stones secure over time.",
   },
   {
     title: "Tightening loose stones",
-    description: "Securing stones that have become loose over time.",
+    description:
+      "Adjusting settings so stones feel safer and more secure.",
   },
   {
     title: "Clean and check",
-    description: "Cleaning jewelry and inspecting it for wear or damage.",
+    description:
+      "Cleaning jewelry and checking for wear before bigger issues show up.",
   },
   {
     title: "Chain repair",
-    description: "Fixing broken or damaged chains so they are wearable again.",
+    description:
+      "Repairing broken or damaged chains so they can be worn again.",
   },
 ];
 
@@ -117,12 +123,13 @@ function ServiceGrid() {
       {services.map((service) => (
         <div
           key={service.title}
-          className="rounded-[1.75rem] border border-stone-300 bg-white/75 px-5 py-5 shadow-sm"
+          className="rounded-[1.75rem] border border-stone-300 bg-white/75 px-5 py-5 shadow-sm transition hover:-translate-y-1"
         >
           <div className="flex items-start gap-3">
             <div className="rounded-2xl bg-stone-900 p-2 text-white">
               <Wrench className="h-4 w-4" />
             </div>
+
             <div>
               <p className="text-sm font-medium leading-6 text-stone-800">
                 {service.title}
@@ -191,9 +198,9 @@ function HomePage() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center"
+          className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch"
         >
-          <div>
+          <div className="flex flex-col justify-center rounded-[2rem] border border-stone-300 bg-white/55 p-8 shadow-sm md:p-12">
             <p className="text-sm uppercase tracking-[0.35em] text-stone-500">
               Trusted repair work
             </p>
@@ -201,7 +208,8 @@ function HomePage() {
               The Greatest To Ever Do It Period.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-stone-700">
-              Give me a ring and I'll fix that ting, give me a band and I'll give it the sand, give me uhhhhh (feeling daring today arnt we).
+              Give me a ring and I'll fix that ting, give me a band and I'll give it the
+              sand, give me uhhhhh (feeling daring today arnt we).
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <NavLink
@@ -221,21 +229,29 @@ function HomePage() {
           </div>
 
           <div className="rounded-[2rem] border border-stone-300 bg-white/75 p-5 shadow-sm">
-            <div className="rounded-[1.75rem] border border-stone-300 bg-gradient-to-br from-[#ecdfd0] via-[#f7f1e8] to-stone-200 p-6">
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div className="rounded-[1.5rem] border border-stone-300/80 bg-white/40 p-5">
-                  <ShieldCheck className="h-7 w-7 text-stone-700" />
-                  <h3 className="mt-4 text-lg font-semibold text-stone-900">Careful Work</h3>
-                  <p className="mt-2 text-sm leading-6 text-stone-700">
-                    it wont even break. Trust me.
-                  </p>
+            <div className="h-full rounded-[1.75rem] border border-stone-300 bg-gradient-to-br from-[#ecdfd0] via-[#f7f1e8] to-stone-200 p-6">
+              <div className="grid h-full gap-4 sm:grid-cols-2">
+                <div className="flex flex-col justify-between rounded-[1.5rem] border border-stone-300/80 bg-white/40 p-5">
+                  <div>
+                    <Wrench className="h-7 w-7 text-stone-700" />
+                    <h3 className="mt-4 text-lg font-semibold text-stone-900">
+                      Bench-Trained Work
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-stone-700">
+                      Trained Jewlery repair with a focus on careful, detail-oriented work
+                    </p>
+                  </div>
                 </div>
-                <div className="rounded-[1.5rem] border border-stone-300/80 bg-white/40 p-5">
-                  <CalendarDays className="h-7 w-7 text-stone-700" />
-                  <h3 className="mt-4 text-lg font-semibold text-stone-900">Easy Booking</h3>
-                  <p className="mt-2 text-sm leading-6 text-stone-700">
-                    Booking like a Barns and Noble.
-                  </p>
+                <div className="flex flex-col justify-between rounded-[1.5rem] border border-stone-300/80 bg-white/40 p-5">
+                  <div>
+                    <CalendarDays className="h-7 w-7 text-stone-700" />
+                    <h3 className="mt-4 text-lg font-semibold text-stone-900">
+                      Simple Booking
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-stone-700">
+                      Reach out on the appointments page to schdule a repair consultation or drop-off
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -244,7 +260,9 @@ function HomePage() {
 
         <section className="mt-20 rounded-[2rem] border border-stone-300 bg-white/70 p-8 shadow-sm md:p-10">
           <div className="mb-8 max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.35em] text-stone-500">Services</p>
+            <p className="text-sm uppercase tracking-[0.35em] text-stone-500">
+              Services
+            </p>
             <h2 className="mt-3 text-3xl font-semibold text-stone-900 md:text-4xl">
               The powers I have
             </h2>
@@ -255,9 +273,80 @@ function HomePage() {
           <ServiceGrid />
         </section>
 
+        <section className="mt-20 rounded-[2rem] border border-stone-300 bg-white/70 p-8 shadow-sm md:p-10">
+          <div className="mb-8 max-w-3xl">
+            <p className="text-sm uppercase tracking-[0.35em] text-stone-500">
+              How it works
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold text-stone-900 md:text-4xl">
+              Very serious professional process
+            </h2>
+            <p className="mt-4 text-base leading-8 text-stone-700">
+              Still placeholder vibes, but this helps clients understand what
+              working with Zach actually looks like.
+            </p>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <div className="rounded-[1.75rem] border border-stone-300 bg-white/75 p-5 shadow-sm">
+              <p className="text-sm uppercase tracking-[0.25em] text-stone-500">
+                Step 1
+              </p>
+              <h3 className="mt-3 text-lg font-semibold text-stone-900">
+                Reach Out
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-stone-700">
+                Hit the appointment page or send a message to get the process
+                started.
+              </p>
+            </div>
+
+            <div className="rounded-[1.75rem] border border-stone-300 bg-white/75 p-5 shadow-sm">
+              <p className="text-sm uppercase tracking-[0.25em] text-stone-500">
+                Step 2
+              </p>
+              <h3 className="mt-3 text-lg font-semibold text-stone-900">
+                Bring in the Piece
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-stone-700">
+                Zach takes a look at the jewelry and figures out what kind of
+                repair it needs.
+              </p>
+            </div>
+
+            <div className="rounded-[1.75rem] border border-stone-300 bg-white/75 p-5 shadow-sm">
+              <p className="text-sm uppercase tracking-[0.25em] text-stone-500">
+                Step 3
+              </p>
+              <h3 className="mt-3 text-lg font-semibold text-stone-900">
+                Get the Work Done
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-stone-700">
+                The repair gets handled with care, precision, and at least a
+                little wizard energy.
+              </p>
+            </div>
+
+            <div className="rounded-[1.75rem] border border-stone-300 bg-white/75 p-5 shadow-sm">
+              <p className="text-sm uppercase tracking-[0.25em] text-stone-500">
+                Step 4
+              </p>
+              <h3 className="mt-3 text-lg font-semibold text-stone-900">
+                Pick It Up
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-stone-700">
+                You get your jewelry back looking cleaner, stronger, and ready
+                to wear again.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="mt-20 grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-center">
           <div>
-            <p className="text-sm uppercase tracking-[0.35em] text-stone-500">Before and after work</p>
+            <p className="text-sm uppercase tracking-[0.35em] text-stone-500">
+              Before and after work
+            </p>
             <h2 className="mt-3 text-3xl font-semibold text-stone-900 md:text-4xl">
               Peep The Results
             </h2>
@@ -295,10 +384,12 @@ function AboutPage() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="grid gap-8 lg:grid-cols-2 lg:items-stretch"
+          className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch"
         >
-          <div className="rounded-[2rem] border border-stone-300 bg-white/75 p-8 shadow-sm md:p-12">
-            <p className="text-base uppercase tracking-[0.35em] text-stone-500">About</p>
+          <div className="flex flex-col justify-center rounded-[2rem] border border-stone-300 bg-white/75 p-8 shadow-sm md:p-12">
+            <p className="text-base uppercase tracking-[0.35em] text-stone-500">
+              About
+            </p>
             <h1 className="mt-4 text-base leading-8 text-stone-900">
               Im Zach a graduate from the Portland Jewelry academy, I'm an aspiring bench jeweler with a deep passion for what I do.
             </h1>
@@ -314,11 +405,11 @@ function AboutPage() {
           </div>
 
           <div className="rounded-[2rem] border border-stone-300 bg-white/75 p-5 shadow-sm">
-            <div className="h-full min-h-[420px] overflow-hidden rounded-[1.75rem] border border-stone-300 bg-stone-200">
+            <div className="h-full min-h-[520px] overflow-hidden rounded-[1.75rem] border border-stone-300 bg-stone-200">
               <img
                 src="/zach-photo.jpg"
                 alt="Zach"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover object-center"
               />
             </div>
           </div>
@@ -326,7 +417,9 @@ function AboutPage() {
 
         <section className="mt-12 rounded-[2rem] border border-stone-300 bg-white/70 p-8 shadow-sm">
           <div className="mb-6 max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.35em] text-stone-500">My approach to repair</p>
+            <p className="text-sm uppercase tracking-[0.35em] text-stone-500">
+              My approach to repair
+            </p>
             <h2 className="mt-3 text-3xl font-semibold text-stone-900">
               A place to talk about the work
             </h2>
@@ -354,7 +447,9 @@ function GalleryPage() {
           transition={{ duration: 0.5 }}
           className="max-w-3xl"
         >
-          <p className="text-sm uppercase tracking-[0.35em] text-stone-500">Repair Gallery</p>
+          <p className="text-sm uppercase tracking-[0.35em] text-stone-500">
+            Repair Gallery
+          </p>
           <h1 className="mt-4 text-4xl font-semibold text-stone-900 md:text-5xl">
             Before and after examples
           </h1>
@@ -371,14 +466,18 @@ function GalleryPage() {
             >
               <div className="mb-6 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
                 <div>
-                  <h2 className="text-2xl font-semibold text-stone-900">{item.title}</h2>
+                  <h2 className="text-2xl font-semibold text-stone-900">
+                    {item.title}
+                  </h2>
                   <p className="mt-2 text-sm uppercase tracking-[0.25em] text-stone-500">
                     {item.service}
                   </p>
                 </div>
               </div>
               <BeforeAfterPlaceholder label={item.title} />
-              <p className="mt-6 max-w-3xl text-sm leading-7 text-stone-700">{item.description}</p>
+              <p className="mt-6 max-w-3xl text-sm leading-7 text-stone-700">
+                {item.description}
+              </p>
             </div>
           ))}
         </section>
@@ -398,12 +497,15 @@ function AppointmentPage() {
           className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]"
         >
           <div className="rounded-[2rem] border border-stone-300 bg-white/75 p-8 shadow-sm md:p-12">
-            <p className="text-sm uppercase tracking-[0.35em] text-stone-500">Appointments</p>
+            <p className="text-sm uppercase tracking-[0.35em] text-stone-500">
+              Appointments
+            </p>
             <h1 className="mt-4 text-4xl font-semibold leading-tight text-stone-900 md:text-5xl">
               Hit My Phone Yall
             </h1>
             <p className="mt-6 text-base leading-8 text-stone-700">
-              This can connect to a Google Calendar booking link or another appointment tool later.
+              This can connect to a Google Calendar booking link or another
+              appointment tool later.
             </p>
             <a
               href="#"
@@ -412,15 +514,25 @@ function AppointmentPage() {
               Connect Google Calendar Booking Link
               <ArrowRight className="h-4 w-4" />
             </a>
-            <p className="mt-4 text-sm leading-7 text-stone-500">
-              Replace this button link with the real Google Calendar scheduling URL when it is ready.
-            </p>
+            <div className="mt-6 border-t border-stone-300 pt-6">
+              <p className="text-sm leading-7 text-stone-700">
+                You can also contact me by email at{" "}
+                <a
+                  href="mailto:zach@example.email"
+                  className="font-medium text-stone-900 underline underline-offset-4"
+                >
+                  zach@example.email
+                </a>
+              </p>
+            </div>
           </div>
 
           <div className="rounded-[2rem] border border-stone-300 bg-gradient-to-br from-[#ecdfd0] via-[#f7f1e8] to-stone-200 p-8 shadow-sm">
             <div className="rounded-[1.75rem] border border-stone-300/80 bg-white/40 p-6">
               <CalendarDays className="h-8 w-8 text-stone-700" />
-              <h2 className="mt-5 text-2xl font-semibold text-stone-900">Simple booking flow</h2>
+              <h2 className="mt-5 text-2xl font-semibold text-stone-900">
+                Simple booking flow
+              </h2>
               <ul className="mt-5 space-y-4 text-sm leading-7 text-stone-700">
                 <li>• Check the appointment page</li>
                 <li>• Pick a time for consultation or drop-off</li>
