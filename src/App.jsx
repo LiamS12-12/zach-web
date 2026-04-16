@@ -73,8 +73,7 @@ const repairGallery = [
 
 function Layout({ children }) {
   const navClass = ({ isActive }) =>
-    `transition hover:text-stone-950 ${
-      isActive ? "text-stone-950 underline underline-offset-8" : "text-stone-600"
+    `transition hover:text-stone-950 ${isActive ? "text-stone-950 underline underline-offset-8" : "text-stone-600"
     }`;
 
   return (
@@ -296,20 +295,32 @@ function AboutPage() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="rounded-[2rem] border border-stone-300 bg-white/75 p-8 shadow-sm md:p-12"
+          className="grid gap-8 lg:grid-cols-2 lg:items-stretch"
         >
-          <p className="text-base uppercase tracking-[0.35em] text-stone-500">About</p>
-          <h1 className="mt-4 text-base leading-8 text-stone-900">
-           Im Zach a graduate from the Portland Jewelry academy, I'm an aspiring bench jewler with a deep passion for what I do.
-          </h1>
+          <div className="rounded-[2rem] border border-stone-300 bg-white/75 p-8 shadow-sm md:p-12">
+            <p className="text-base uppercase tracking-[0.35em] text-stone-500">About</p>
+            <h1 className="mt-4 text-base leading-8 text-stone-900">
+              Im Zach a graduate from the Portland Jewelry academy, I'm an aspiring bench jeweler with a deep passion for what I do.
+            </h1>
 
-          <div className="mt-8 space-y-6 text-base leading-8 text-stone-700">
-            <p>
-              Based here in Portland, I'm able to use the techniques and training through the school and I'm still learning everyday working alongside my father
-            </p>
-            <p>
-              Weather it's a simple repair or a full restoration I treat every piece with the precision and care that it deserves
-            </p>
+            <div className="mt-8 space-y-6 text-base leading-8 text-stone-700">
+              <p>
+                Based here in Portland, I'm able to use the techniques and training through the school and I'm still learning everyday working alongside my father
+              </p>
+              <p>
+                Whether it's a simple repair or a full restoration I treat every piece with the precision and care that it deserves
+              </p>
+            </div>
+          </div>
+
+          <div className="rounded-[2rem] border border-stone-300 bg-white/75 p-5 shadow-sm">
+            <div className="h-full min-h-[420px] overflow-hidden rounded-[1.75rem] border border-stone-300 bg-stone-200">
+              <img
+                src="/zach-photo.jpg"
+                alt="Zach"
+                className="h-full w-full object-cover"
+              />
+            </div>
           </div>
         </motion.section>
 
