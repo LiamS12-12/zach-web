@@ -300,23 +300,15 @@ function AboutPage() {
         >
           <p className="text-sm uppercase tracking-[0.35em] text-stone-500">About</p>
           <h1 className="mt-4 text-4xl font-semibold leading-tight text-stone-900 md:text-5xl">
-           Im Zach a graduate Portland Jewelry academy, I'm an asiring bench jewler with a deep passion for what I do.
+           Im Zach a graduate from the Portland Jewelry academy, I'm an aspiring bench jewler with a deep passion for what I do.
           </h1>
 
           <div className="mt-8 space-y-6 text-base leading-8 text-stone-700">
             <p>
-              His palms are sweaty, knees weak, arms are heavy
-              There's vomit on his sweater already, mom's spaghetti
+              Based here in Portland, I'm able to use the techniques and training through the school and I'm still learning everyday working alongside my father
             </p>
             <p>
-              He's nervous, but on the surface, he looks calm and ready
-              To drop bombs, but he keeps on forgetting
-              What he wrote down, the whole crowd goes so loud
-              He opens his mouth, but the words won't come out
-            </p>
-            <p>
-              He's chokin', how? Everybody's jokin' now
-              The clock's run out, time's up, over, blaow
+              Weather it's a simple repair or a full restoration I treat every piece with the precision and care that it deserves
             </p>
           </div>
         </motion.section>
